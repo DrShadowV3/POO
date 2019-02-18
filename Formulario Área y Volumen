@@ -1,0 +1,100 @@
+import javax.swing.JOptionPane;
+import java.util.*;
+
+
+public class (Nombre del paquete)
+{
+    public static void main(String[] args)
+    {
+    int opcion=0;
+        double figura, valor1, valor2;
+        do
+        {
+            opcion= Integer.parseInt(JOptionPane.showInputDialog
+                    ("Menu \n" +
+                    "1) Areas \n" +
+                    "2) Volumen \n" +
+                    "3) Salir"));
+            switch(opcion)
+            {
+                case 1:
+                    
+                    opcion= Integer.parseInt(JOptionPane.showInputDialog
+                    ("Areas \n" +
+                    "1) Circulo \n" +
+                    "2) Triangulo \n" +
+                    "3) Rectangulo \n" +
+                    "4) Pentagono \n" +
+                    "5) Salir"));
+                    switch(opcion)
+                    {
+                        case 1:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor del radio: "));
+                            figura= (valor1*valor1)*3.1416;
+                    JOptionPane.showMessageDialog(null, "El area del circulo es: " +figura);
+                    break;
+                        case 2:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la base: "));
+                    valor2=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la altura: "));
+                            figura= (valor1*valor2)/2;
+                    JOptionPane.showMessageDialog(null, "El area del triangulo es: " +figura);
+                    break;
+                        case 3:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la base: "));
+                    valor2=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la altura: "));
+                            figura= valor1*valor2;
+                    JOptionPane.showMessageDialog(null, "El area del rectangulo es: " +figura);
+                    break;
+                        case 4:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor del perimetro: "));
+                    valor2=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la apotema: "));
+                            figura= (valor1*valor2)/2;
+                    JOptionPane.showMessageDialog(null, "El area del pentagono es: " +figura);     
+                    }
+                    System.exit(0);
+                    
+                case 2:
+                    opcion= Integer.parseInt(JOptionPane.showInputDialog
+                    ("Volumen \n" +
+                    "1) Piramide \n" +
+                    "2) Cilindro \n" +
+                    "3) Cubo \n" +
+                    "4) Salir"));
+                    switch(opcion)
+                    {
+                        case 1:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el area de la base: "));
+                    valor2=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la altura: "));
+                            figura= (valor1*valor2)/3;
+                    JOptionPane.showMessageDialog(null, "El volumen de la piramide es: " +figura);
+                    break;
+                        case 2:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor del radio: "));
+                    valor2=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor de la altura: "));
+                            figura= (3.1416*(valor1*valor1))*valor2;
+                    JOptionPane.showMessageDialog(null, "El volumen del cilindro es: " +figura);
+                    break;
+                        case 3:
+                    valor1=Double.parseDouble(JOptionPane.showInputDialog
+                            ("Ingresa el valor del lado: "));
+                            figura= valor1*valor1*valor1;
+                    JOptionPane.showMessageDialog(null, "El volumen del cubo es: " +figura);
+                    break;
+                    }
+                    System.exit(0);
+            }
+        }
+        while(opcion!=3);
+    }
+}
